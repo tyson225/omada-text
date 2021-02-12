@@ -1,0 +1,30 @@
+{
+  "name": "omadatext",
+  "version": "1.0.0",
+  "description": "Web application that will allow the employees of OmadaTek to socialize with one another. They will be prompted to log in or sign up to their account. Once authenticated the user will be allowed access into the platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js localhost:5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyson225/omada-text.git"
+  },
+  "author": "Tyson McDonald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyson225/omada-text/issues"
+  },
+  "homepage": "https://github.com/tyson225/omada-text#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
+  }
+}
