@@ -11,7 +11,7 @@ app.use(express.json({ extended: false })); // Mitigates the need for body parse
 
 // ROUTES
 app.use('/api/users', require('./routes/users.js'))
-// app.use('/api/posts', require('./routes/posts.js'))
+app.use('/api/posts', require('./routes/posts.js'))
 
 // Holds either the port given from the heroku environment or localhost:5000
 let PORT = process.env.PORT || 5000;
