@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Index from './pages/Index.js';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -7,8 +7,17 @@ import Footer from './compoments/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './store';
 import { Provider } from 'react-redux';
+import setAuthToken from './middleware/setAuthToken';
+import { userLoaded } from './actions/auth.actions';
+
+if (localStorage.getItem('token')) {
+  setAuthToken(localStorage.getItem('token'));
+}
 
 const App = () => {
+  useEffect(() => {
+    store.dispatch(userLoaded());
+  });
   return (
     <Router>
       <Provider store={store}>
